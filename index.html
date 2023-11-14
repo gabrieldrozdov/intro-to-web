@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>test-project-1.html</title>
+	<link rel="stylesheet" href="style.css">
+
+	<!-- CodeMirror -->
+	<link rel="stylesheet" href="cm/lib/codemirror.css">
+	<script src="cm/lib/codemirror.js"></script>
+	<script src="cm/mode/htmlmixed/htmlmixed.js"></script>
+	<script src="cm/mode/xml/xml.js"></script>
+	<script src="cm/mode/css/css.js"></script>
+	<script src="cm/mode/javascript/javascript.js"></script>
+
+	<!-- CodeMirror addons -->
+	<link rel="stylesheet" href="cm/addon/hint/show-hint.css">
+	<script src="cm/addon/hint/show-hint.js"></script>
+	<script src="cm/addon/hint/anyword-hint.js"></script>
+	<script src="cm/addon/hint/xml-hint.js"></script>
+	<script src="cm/addon/hint/html-hint.js"></script>
+	<script src="cm/addon/hint/css-hint.js"></script>
+	<script src="cm/addon/hint/javascript-hint.js"></script>
+	<script src="cm/addon/edit/closetag.js"></script>
+	<script src="cm/addon/edit/closebrackets.js"></script>
+	<script src="cm/addon/selection/active-line.js"></script>
+	<script src="cm/addon/edit/matchbrackets.js"></script>
+</head>
+<body>
+
+	<div class="alert" data-active="0" onclick="hideAlert()">
+		<h4 class="alert-text">Reopen the editor using the button in the top-right corner</h4>
+		<p><span class="symbol">close</span> Click anywhere to hide this message</p>
+	</div>
+
+	<nav class="toc" data-active="0">
+		<div class="toc-navbar">
+			<h3 class="toc-navbar-title">Pick a project!</h3>
+			<button onclick="closeProjects()" class="toc-navbar-close"><span class="symbol">close</span> Close</button>
+		</div>
+
+		<a href="#test-project-1" class="toc-link" style="--primary: var(--yellow);">
+			<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" class="toc-thumbnail">
+			<h4 class="toc-title"><span>1</span> test-project-1.html</h4>
+			<div class="toc-rating">
+				<h4>Difficulty</h4>
+				<div data-active="1"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+			</div>
+			<div class="toc-outcomes">
+				<h4>What you’ll learn</h4>
+				<ul>
+					<li>What HTML is</li>
+					<li>How HTML responds to the browser window</li>
+					<li>Basic HTML syntax</li>
+				</ul>
+			</div>
+		</a>
+
+		<a href="#programmatic-poetry" class="toc-link" style="--primary: var(--yellow);">
+			<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" class="toc-thumbnail">
+			<h4 class="toc-title"><span>2</span> programmatic-poetry.html</h4>
+			<div class="toc-rating">
+				<h4>Difficulty</h4>
+				<div data-active="1"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+			</div>
+			<div class="toc-outcomes">
+				<h4>What you’ll learn</h4>
+				<ul>
+					<li>How to lay out a website with HTML elements</li>
+					<li>How to style HTML elements using inline CSS</li>
+				</ul>
+			</div>
+		</a>
+
+		<a href="#self-portrait" class="toc-link" style="--primary: var(--yellow);">
+			<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" class="toc-thumbnail">
+			<h4 class="toc-title"><span>3</span> self-portrait.html</h4>
+			<div class="toc-rating">
+				<h4>Difficulty</h4>
+				<div data-active="1"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+			</div>
+			<div class="toc-outcomes">
+				<h4>What you’ll learn</h4>
+				<ul>
+					<li>How to lay out a website with HTML elements</li>
+					<li>How to style HTML elements using inline CSS</li>
+				</ul>
+			</div>
+		</a>
+
+		<a href="#blog-post" class="toc-link" style="--primary: var(--red);">
+			<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" class="toc-thumbnail">
+			<h4 class="toc-title"><span>4</span> blog-post.html</h4>
+			<div class="toc-rating">
+				<h4>Difficulty</h4>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+			</div>
+			<div class="toc-outcomes">
+				<h4>What you’ll learn</h4>
+				<ul>
+					<li>How to lay out a website with HTML elements</li>
+					<li>How to style HTML elements using inline CSS</li>
+				</ul>
+			</div>
+		</a>
+
+		<!-- <a href="#programmatic-poetry" class="toc-link" style="--primary: var(--blue);">
+			<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" class="toc-thumbnail">
+			<h4 class="toc-title">programmatic-poetry.html</h4>
+			<div class="toc-rating">
+				<h4>Difficulty</h4>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+			</div>
+			<div class="toc-outcomes">
+				<h4>What you’ll learn</h4>
+				<ul>
+					<li>How to lay out a website with HTML elements</li>
+					<li>How to style HTML elements using inline CSS</li>
+				</ul>
+			</div>
+		</a>
+		<a href="#programmatic-poetry" class="toc-link" style="--primary: var(--purple);">
+			<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" class="toc-thumbnail">
+			<h4 class="toc-title">programmatic-poetry.html</h4>
+			<div class="toc-rating">
+				<h4>Difficulty</h4>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="0"></div>
+				<div data-active="0"></div>
+			</div>
+			<div class="toc-outcomes">
+				<h4>What you’ll learn</h4>
+				<ul>
+					<li>How to lay out a website with HTML elements</li>
+					<li>How to style HTML elements using inline CSS</li>
+				</ul>
+			</div>
+		</a>
+
+		<a href="#programmatic-poetry" class="toc-link" style="--primary: var(--green);">
+			<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" class="toc-thumbnail">
+			<h4 class="toc-title">programmatic-poetry.html</h4>
+			<div class="toc-rating">
+				<h4>Difficulty</h4>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="0"></div>
+			</div>
+			<div class="toc-outcomes">
+				<h4>What you’ll learn</h4>
+				<ul>
+					<li>How to lay out a website with HTML elements</li>
+					<li>How to style HTML elements using inline CSS</li>
+				</ul>
+			</div>
+		</a>
+
+		<a href="#programmatic-poetry" class="toc-link" style="--primary: var(--pink);">
+			<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" class="toc-thumbnail">
+			<h4 class="toc-title">programmatic-poetry.html</h4>
+			<div class="toc-rating">
+				<h4>Difficulty</h4>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+				<div data-active="1"></div>
+			</div>
+			<div class="toc-outcomes">
+				<h4>What you’ll learn</h4>
+				<ul>
+					<li>How to lay out a website with HTML elements</li>
+					<li>How to style HTML elements using inline CSS</li>
+				</ul>
+			</div>
+		</a> -->
+	</nav>
+
+	<main class="container">
+		<div class="navbar">
+			<button onclick="openEditor()" class="navbar-toggle" id="btn-editor"><span class="symbol">edit</span> Editor</button>
+			<button onclick="openProjects()" class="navbar-toggle" id="btn-projects"><span class="symbol">apps</span> Projects</button>
+		</div>
+
+		<header class="header">
+			<h1><a href="#test-project-1" class="header-title">test-project-1.html</a></h1>
+			<h2 class="header-callout">
+				<span style="color: var(--red);">Make</span> <span style="color: var(--blue);">Art</span>
+				</span><span style="color: var(--purple);">&gt;</span>
+				<span style="color: var(--green);">Learn</span> <span style="color: var(--pink);">Code</span>
+			</h2>
+			<p class="header-desc">Creative web projects that’ll teach you HTML, CSS, and JavaScript.</p>
+		</header>
+
+		<div class="intro">
+			<div class="intro-section">
+				<img src="assets/graphics/intro-1.svg" class="intro-img">
+				<h3 class="intro-heading">Learn code naturally by tackling creative challenges</h3>
+				<p class="intro-desc">
+					Whether you’re coding for the first time or trying to pick it back up, it’s easy to hit a wall and feel discouraged. It doesn’t have to be that way! In this website, you’ll find a series of creative projects that will help you gradually pick up coding skills while always making sure you get little victories to keep you motivated.
+				</p>
+				<p class="intro-desc">
+					You’ll also pick up the skills needed to become a self-sufficient coder. Instead of articles or lectures, this website features numerous links to helpful online resources that professional developers use as they code, too. (Big shout-outs to <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a> and <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>!)
+				</p>
+				<div class="intro-spacer"></div>
+				<button class="intro-btn" onclick="openProjects();"><span class="symbol">apps</span> Pick a project!</button>
+			</div>
+			
+			<div class="intro-section">
+				<img src="assets/graphics/intro-2.svg" class="intro-img">
+				<h3 class="intro-heading">Play with live demos directly in your web browser</h3>
+				<p class="intro-desc">
+					Setting up a development environment on your computer is one of the first challenges of coding. You have to <a href="https://code.visualstudio.com/" target="_blank">install a text editor</a>, <a href="https://github.com/" target="_blank">get on GitHub</a>, and <a href="https://pages.github.com/" target="_blank">learn how to launch a website</a>. While that’s a really important part of creating websites, it’s also something that can stop new coders before they even write a line of code.
+				</p>
+				<p class="intro-desc">
+					If you’re still in that phase, good news! This site features a built-in text editor that let’s you play with code right in your browser. And once you’re ready to code on your own, you can download the project demos straight from this website’s <a href="https://github.com/gabrieldrozdov/test-project-1" target="_blank">GitHub repository</a>.
+				</p>
+				<div class="intro-spacer"></div>
+				<button class="intro-btn" onclick="openEditor();"><span class="symbol">edit</span> Check out the editor!</button>
+			</div>
+
+			<div class="intro-section">
+				<img src="assets/graphics/intro-3.svg" class="intro-img">
+				<h3 class="intro-heading">There’s a whole world of code to explore!</h3>
+				<p class="intro-desc">
+					Once you get into coding, the question changes from “What can I do?” to “What <em>can’t</em> I do?” Websites are an exciting platform for making creative coding projects for so many reasons. Websites work on virtually any device, are easy to get started developing for, enable interactive experiences from the jump, and have a vibrant decades-old community of designers and developers dedicated to making them better and better.
+				</p>
+				<p class="intro-desc">
+					If you find these projects inspiring, then don’t stop! Once you learn JavaScript, you can start working with libraries that enable <a href="https://p5js.org/" target="_blank">generative art</a>, <a href="https://tonejs.github.io/" target="_blank">audio synthesis</a>, <a href="https://brm.io/matter-js/" target="_blank">physics simulation</a>, <a href="https://threejs.org/" target="_blank">3D modeling</a>, <a href="https://d3js.org/" target="_blank">data visualization</a>, <a href="https://ml5js.org/" target="_blank">machine learning</a>, and so much more. And if don’t know where to start, we’ve got you covered with a new website: DEMOLAND.
+				</p>
+				<div class="intro-spacer"></div>
+				<a class="intro-btn" href="https://demoland.gdwithgd.com" target="_blank" disabled><span class="symbol">import_contacts</span> Coming soon!</a>
+			</div>
+		</div>
+
+		<div class="section-divider"></div>
+
+		<section id="test-project-1" class="project" style="--primary: var(--yellow);">
+			<div class="project-desc">
+				<h3><a href="#test-project-1" class="project-name"><span>1</span> test-project-1.html</a></h3>
+				<div class="project-rating">
+					<h4>Difficulty</h4>
+					<div data-active="1"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+				</div>
+				<div class="project-outcomes">
+					<h4>What you’ll learn</h4>
+					<ul>
+						<li>What HTML is</li>
+						<li>How HTML responds to the browser window</li>
+						<li>Basic HTML syntax</li>
+					</ul>
+				</div>
+				<div class="project-desc-text">
+					<h4>Background</h4>
+					<p>
+						One way in which websites are unique is their ability to take on many forms to fit any screen size. To accomplish this, websites are less like images or books, and more like instructions for creating an image or book. Those instructions are written as code in the form of <span class="project-desc-highlight" onclick="highlightResource('test-project-1-html')">HTML</span>.
+					</p>
+					<p>
+						HTML is the backbone of the web. It’s a <em>programming language</em>, which means that computers can read it like a set of instructions to display information on your screen. Unlike traditional languages, programming languages have to follow super precise rules to be understood by computers. We call these rules the language’s <em>syntax</em>. HTML’s syntax is structured around <em>HTML tags</em>, which create <span class="project-desc-highlight" onclick="highlightResource('test-project-1-html-elements')">HTML elements</span>.
+					</p>
+
+					<h4>Prompt</h4>
+					<p>
+						In this project, let’s explore the peculiarities of websites and HTML.
+					</p>
+					<p>
+						Create an HTML file. Using just text, design a website that encourages users to resize the browser window.
+					</p>
+
+					<h4>Questions to Explore</h4>
+					<p>
+						<em>What happens if you try to press “return” or ”enter” to <span class="project-desc-highlight" onclick="highlightResource('test-project-1-br')">break</span> to a new line?</em>
+					</p>
+					<p>
+						<em>What happens if you try to add multiple spaces in a row? (Hint: nothing happens! How can you add multiple <span class="project-desc-highlight" onclick="highlightResource('test-project-1-html-entities')">spaces</span> in a row?)</em>
+					</p>
+					<p>
+						<em>How can you <span class="project-desc-highlight" onclick="highlightResource('test-project-1-em')">italicize</span> or <span class="project-desc-highlight" onclick="highlightResource('test-project-1-strong')">bold</span> text?</em>
+					</p>
+					<p>
+						<em>Is everything in your HTML file <span class="project-desc-highlight" onclick="highlightResource('test-project-1-html-comments')">visible</span> on the live website?</em>
+					</p>
+				</div>
+			</div>
+
+			<div class="project-content">
+				<div class="preview">
+					<iframe class="preview-iframe" src="projects/test-project-1.html"></iframe>
+					<div class="preview-links">
+						<button class="preview-link" onclick="openEditor('test-project-1.html')"><span class="symbol">edit</span> Play with the code</button>
+						<a href="https://github.com/gabrieldrozdov/test-project-1/tree/main/projects/test-project-1.html" class="preview-link" target="_blank"><span class="symbol">download</span> Download on GitHub</a>
+						<a href="projects/test-project-1.html" target="_blank" class="preview-link"><span class="symbol">open_in_new</span> Open in a new tab</a>
+					</div>
+				</div>
+
+				<div class="concepts" id="test-project-1-concepts">
+					<h5><a href="#test-project-1-concepts" class="concepts-title">Concepts</a></h5>
+
+					<div class="concepts-list">
+						<div class="concept" id="test-project-1-html">
+							<div class="concept-name">
+								<h5>
+									HTML
+								</h5>
+							</div>
+							<p class="concept-desc">
+								HyperText Markup Language, the main programming language of the web
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/whatis/whatis_html.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept" id="test-project-1-html-elements">
+							<div class="concept-name">
+								<h5>
+									HTML elements
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Structuring an HTML document into discrete units of information
+							</p>
+							<div class="concept-links">
+								<a href="https://www.w3schools.com/html/html_elements.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank"><span class="symbol">link</span> List of all HTML elements</a>
+							</div>
+						</div>
+
+						<div class="concept" id="test-project-1-html-entities">
+							<div class="concept-name">
+								<h5>
+									HTML entities
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Special notation for writing spaces, punctuation, and more in an HTML file
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Glossary/Entity" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/html/html_entities.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+								<a href="https://www.toptal.com/designers/htmlarrows/symbols/" target="_blank"><span class="symbol">link</span> List of all HTML entities</a>
+							</div>
+						</div>
+
+						<div class="concept" id="test-project-1-html-comments">
+							<div class="concept-name">
+								<h5>
+									HTML comments
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Invisible notes inside an HTML file
+							</p>
+							<div class="concept-links">
+								<a href="https://www.w3schools.com/html/html_comments.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="concepts" id="test-project-1-html">
+					<h5><a href="#test-project-1-html" class="concepts-title">HTML Elements for Formatting Text</a></h5>
+
+					<div class="concepts-list">
+						<div class="concept" id="test-project-1-br">
+							<div class="concept-name">
+								<h5>
+									&lt;br&gt
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Line breaks
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_br.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept" id="test-project-1-em">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;em&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/em&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Italicized text
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_em.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept" id="test-project-1-strong">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;strong&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/strong&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Bolded text
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_strong.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept" id="test-project-1-pre">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;pre&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/pre&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Preformatted text
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_pre.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="section-divider"></div>
+
+		<section id="programmatic-poetry" class="project" style="--primary: var(--yellow);">
+			<div class="project-desc">
+				<h3><a href="#programmatic-poetry" class="project-name"><span>2</span> programmatic-poetry.html</a></h3>
+				<div class="project-rating">
+					<h4>Difficulty</h4>
+					<div data-active="1"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+				</div>
+				<div class="project-outcomes">
+					<h4>What you’ll learn</h4>
+					<ul>
+						<li>How to lay out a website with HTML elements</li>
+						<li>How to style HTML elements using inline CSS</li>
+					</ul>
+				</div>
+				<div class="project-desc-text">
+					<h4>Background</h4>
+					<p>
+						Coming soon!
+					</p>
+
+					<h4>Prompt</h4>
+					<p>
+						Pick a poem from the <a href="https://www.poetryfoundation.org/poems/browse#page=1&sort_by=recently_added" target="_blank">Poetry Foundation archives</a>. Typeset your poem using HTML elements and inline CSS. You’ll probably end up with something that looks like it’s out of a <a href="https://images.app.goo.gl/iWiyk7qP8Qpoe8ZA6" target="_blank">Geronimo Stilton book</a>.
+					</p>
+
+					<h4>Questions to Explore</h4>
+					<p>
+						Coming soon!
+					</p>
+				</div>
+			</div>
+
+			<div class="project-content">
+				<div class="preview">
+					<iframe class="preview-iframe" src="projects/programmatic-poetry.html"></iframe>
+					<div class="preview-links">
+						<button class="preview-link" onclick="openEditor('programmatic-poetry.html')"><span class="symbol">edit</span> Play with the code</button>
+						<a href="https://github.com/gabrieldrozdov/test-project-1/tree/main/projects/programmatic-poetry.html" class="preview-link"><span class="symbol" target="_blank">download</span> Download on GitHub</a>
+						<a href="projects/programmatic-poetry.html" target="_blank" class="preview-link"><span class="symbol">open_in_new</span> Open in a new tab</a>
+					</div>
+				</div>
+
+				<div class="concepts" id="programmatic-poetry-concepts">
+					<h5><a href="#programmatic-poetry-concepts" class="concepts-title">Concepts</a></h5>
+
+					<div class="concepts-list">
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									HTML attributes
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Embedding information inside an HTML element
+							</p>
+							<div class="concept-links">
+								<a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank"><span class="symbol">link</span> List of all HTML attributes</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>style="</span><span class="concept-name-alt">color: blue;</span><span>"</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								HTML style attribute for inline CSS
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/att_style.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									CSS
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Cascading Style Sheets, a programming language that lets you style HTML elements
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_intro.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									CSS properties
+								</h5>
+							</div>
+							<p class="concept-desc">
+								A characteristic of an HTML element that you can define/redefine using CSS (e.g. color, font, font size, etc.)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Glossary/Property/CSS" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/index.php" target="_blank"><span class="symbol">link</span> List of all CSS properties</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									CSS units
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Units for specifying CSS properties like font size, width, height, and more
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/css_units.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									CSS colors
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Formats for specifying color in CSS
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/css_colors_legal.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+								<a href="https://www.w3schools.com/cssref/css_colors.php" target="_blank"><span class="symbol">link</span> List of named CSS colors</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="concepts" id="programmatic-poetry-html">
+					<h5><a href="#programmatic-poetry-html" class="concepts-title">HTML Elements for Different Types of Text</a></h5>
+
+					<div class="concepts-list">
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									&lt;p&gt; <span class="concept-name-alt">___</span> &lt;/p&gt;
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Paragraph element
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/html/html_paragraphs.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									&lt;h1&gt; <span class="concept-name-alt">___</span> &lt;/h1&gt;
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Heading elements (&lt;h1&gt;-&lt;h6&gt;)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/html/html_headings.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									&lt;span&gt; <span class="concept-name-alt">___</span> &lt;/span&gt;
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Generic inline container
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_span.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									&lt;a href="<span class="concept-name-alt">___</span>"&gt; <span class="concept-name-alt">___</span> &lt;/a&gt;
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Anchor (link) element
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_a.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="concepts" id="programmatic-poetry-css">
+					<h5><a href="#programmatic-poetry-css" class="concepts-title">CSS Properties for Styling Text</a></h5>
+					
+					<div class="concepts-list">
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									font-size: <span class="concept-name-alt">12px;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Text size
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_font_size.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									color: <span class="concept-name-alt">rgb(255, 0, 0);</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Text color
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_text_color.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									font-family: <span class="concept-name-alt">sans-serif;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Typeface/font
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_font_size.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									font-style: <span class="concept-name-alt">italic;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Italicization
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-style" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_font_font-style.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									font-weight: <span class="concept-name-alt">bold;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Boldness
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_font_weight.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									text-align: <span class="concept-name-alt">center;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Left, right, center, and justified alignment
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_text_text-align.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									text-decoration: <span class="concept-name-alt">underline;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Underline, overline, and more
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_text_text-decoration.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									line-height: <span class="concept-name-alt">1.2em;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Space between lines of text (a.k.a. leading)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_dim_line-height.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									letter-spacing: <span class="concept-name-alt">.1em;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Space between letters (a.k.a. tracking)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_text_letter-spacing.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									word-spacing: <span class="concept-name-alt">1em;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Space between words
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_text_word-spacing.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									text-shadow: <span class="concept-name-alt">5px 5px 10px black;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Drop shadow for text elements
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/css3_pr_text-shadow.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									writing-mode: <span class="concept-name-alt">vertical-lr;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Writing direction (horizontal or vertical)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/css3_pr_writing-mode.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									text-emphasis: <span class="concept-name-alt">filled red;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Add emphasis marks to text
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-emphasis" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/css3_pr_text-emphasis.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="section-divider"></div>
+
+		<section id="self-portrait" class="project" style="--primary: var(--yellow);">
+			<div class="project-desc">
+				<h3><a href="#self-portrait" class="project-name"><span>3</span> self-portrait.html</a></h3>
+				<div class="project-rating">
+					<h4>Difficulty</h4>
+					<div data-active="1"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+				</div>
+				<div class="project-outcomes">
+					<h4>What you’ll learn</h4>
+					<ul>
+						<li>How to lay out a website with HTML elements</li>
+						<li>How to style HTML elements using inline CSS</li>
+					</ul>
+				</div>
+				<div class="project-desc-text">
+					<h4>Background</h4>
+					<p>
+						Coming soon!
+					</p>
+
+					<h4>Prompt</h4>
+					<p>
+						On a piece of paper, draw a simple self-portrait using rectangles and ovals. I recommend using no more than 10–15 shapes total. Use as many colors as you want, and decided whether your shapes should be filled-in, outlined, or both.
+					</p>
+					<p>
+						Then, using only &lt;div&gt; elements and inline CSS, recreate your self-portrait on a website.
+					</p>
+
+					<h4>Questions to Explore</h4>
+					<p>
+						Coming soon!
+					</p>
+				</div>
+			</div>
+
+			<div class="project-content">
+				<div class="preview">
+					<iframe class="preview-iframe" src="projects/self-portrait.html"></iframe>
+					<div class="preview-links">
+						<button class="preview-link" onclick="openEditor('self-portrait.html')"><span class="symbol">edit</span>&nbsp;Play with the code</button>
+						<a href="https://github.com/gabrieldrozdov/test-project-1/tree/main/projects/self-portrait.html" class="preview-link"><span class="symbol">download</span>&nbsp;Download on GitHub</a>
+						<a href="projects/self-portrait.html" target="_blank" class="preview-link"><span class="symbol">open_in_new</span>&nbsp;Open in a new tab</a>
+					</div>
+				</div>
+
+
+
+				<div class="concepts" id="programmatic-poetry-concepts">
+					<h5><a href="#programmatic-poetry-concepts" class="concepts-title">Recap</a></h5>
+
+					<div class="concepts-list">
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									CSS units
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Units for specifying CSS properties like font size, width, height, and more
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/css_units.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									CSS colors
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Formats for specifying color in CSS
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/css_colors_legal.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+								<a href="https://www.w3schools.com/cssref/css_colors.php" target="_blank"><span class="symbol">link</span> List of named CSS colors</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="concepts" id="programmatic-poetry-css">
+					<h5><a href="#programmatic-poetry-css" class="concepts-title">A New HTML Element</a></h5>
+
+					<div class="concepts-list">
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;div&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/div&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Generic block container
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_div.ASP" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="concepts" id="programmatic-poetry-css">
+					<h5><a href="#programmatic-poetry-css" class="concepts-title">CSS Properties for Moving Elements Around</a></h5>
+
+					<div class="concepts-list">					
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>position: </span>
+									<span class="concept-name-alt">absolute;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Manually setting an element’s position on the page (or inside another element)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>top: </span>
+									<span class="concept-name-alt">0px;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Distance from the top of the page (or parent element)
+							</p>
+							<p class="concept-note">
+								Does not work for elements with “position: static;” (default value)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>bottom: </span>
+									<span class="concept-name-alt">20vh;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Distance from the bottom of the page (or parent element)
+							</p>
+							<p class="concept-note">
+								Does not work for elements with “position: static;” (default value)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>left: </span>
+									<span class="concept-name-alt">40px;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Distance from the left side of the page (or parent element)
+							</p>
+							<p class="concept-note">
+								Does not work for elements with “position: static;” (default value)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>right: </span>
+									<span class="concept-name-alt">10vw;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Distance from the right side of the page (or parent element)
+							</p>
+							<p class="concept-note">
+								Does not work for elements with “position: static;” (default value)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>transform: </span>
+									<span class="concept-name-alt">rotate(30deg) scale(.8);</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Rotate, translate, scale, or skew an element
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/css3_pr_transform.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>z-index: </span>
+									<span class="concept-name-alt">9;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Stacking order for layered elements
+							</p>
+							<p class="concept-note">
+								Does not work for elements with “position: static;” (default value)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_pos_z-index.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="concepts" id="programmatic-poetry-css">
+					<h5><a href="#programmatic-poetry-css" class="concepts-title">CSS Properties for Styling Elements</a></h5>
+					
+					<div class="concepts-list">
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>width: </span>
+									<span class="concept-name-alt">200px;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Width (affected by “box-sizing” property)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_dim_width.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>height: </span>
+									<span class="concept-name-alt">20vh;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Height (affected by “box-sizing” property)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_dim_height.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>background-color: </span>
+									<span class="concept-name-alt">hsl(120deg, 100%, 50%);</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Background color
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_background-color.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>border-width: </span>
+									<span class="concept-name-alt">4px;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Size of border around an element
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_border_width.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>border-style: </span>
+									<span class="concept-name-alt">dotted;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Type of border around an element
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_border.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>border-color: </span>
+									<span class="concept-name-alt">#32a1ce;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Color of border around an element
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_border_color.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>border: </span>
+									<span class="concept-name-alt">1px solid black;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Shorthand for setting all border properties at once
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_border.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>border-radius: </span>
+									<span class="concept-name-alt">20px;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Rounded corners
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/css3_pr_border-radius.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>box-sizing: </span>
+									<span class="concept-name-alt">border-box;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Change how an element’s width and height are calculated
+							</p>
+							<p class="concept-note">
+								By default, the border width is NOT included in this calculation
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css3_box-sizing.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="section-divider"></div>
+
+		<section id="blog-post" class="project" style="--primary: var(--red);">
+			<div class="project-desc">
+				<h3><a href="#blog-post" class="project-name"><span>4</span> blog-post.html</a></h3>
+				<div class="project-rating">
+					<h4>Difficulty</h4>
+					<div data-active="1"></div>
+					<div data-active="1"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+				</div>
+				<div class="project-outcomes">
+					<h4>What you’ll learn</h4>
+					<ul>
+						<li>How to lay out a website with HTML elements</li>
+						<li>How to style HTML elements using inline CSS</li>
+					</ul>
+				</div>
+				<div class="project-desc-text">
+					<h4>Background</h4>
+					<p>
+						Coming soon!
+					</p>
+
+					<h4>Prompt</h4>
+					<p>
+						Coming soon!
+					</p>
+
+					<h4>Questions to Explore</h4>
+					<p>
+						Coming soon!
+					</p>
+				</div>
+			</div>
+
+			<div class="project-content">
+				<div class="preview">
+					<iframe class="preview-iframe" src="projects/blog-post.html"></iframe>
+					<div class="preview-links">
+						<button class="preview-link" onclick="openEditor('blog-post.html')"><span class="symbol">edit</span>&nbsp;Play with the code</button>
+						<a href="https://github.com/gabrieldrozdov/test-project-1/tree/main/projects/blog-post.html" class="preview-link" target="_blank"><span class="symbol">download</span>&nbsp;Download on GitHub</a>
+						<a href="projects/blog-post.html" target="_blank" class="preview-link"><span class="symbol">open_in_new</span>&nbsp;Open in a new tab</a>
+					</div>
+				</div>
+
+				<div class="concepts" id="programmatic-poetry-css">
+					<h5><a href="#programmatic-poetry-css" class="concepts-title">Concepts</a></h5>
+
+					<div class="concepts-list">
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>Internal CSS</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Defining CSS inside an HTML document using the &lt;style&gt; element
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured#internal_stylesheet" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_howto.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>CSS Classes</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Defining CSS for elements with a specific “class” attribute
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/sel_class.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>CSS Box Model</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								The way every HTML element is arranged, positioned, and displayed on the page
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>HTML File Paths</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								How to link to other content, like images
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/html/html_filepaths.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="concepts" id="programmatic-poetry-css">
+					<h5><a href="#programmatic-poetry-css" class="concepts-title">HTML Elements for Organizing Information</a></h5>
+
+					<div class="concepts-list">
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;head&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/head&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Document metadata
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/html/html_head.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;style&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/style&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Internal CSS
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_style.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;body&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/body&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Visible content
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_body.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;main&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/main&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Works just like a &lt;div&gt;, but indicates the main content of the page
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_main.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;section&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/section&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Works just like a &lt;div&gt;, but indicates a section of content
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_section.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;ul&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/ul&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Unordered (bulleted) lists
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_ul.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;ol&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/ol&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Ordered (numbered) lists
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_ol.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;li&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/li&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								List items
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/tags/tag_li.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+						
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>&lt;table&gt;</span>
+									<span class="concept-name-alt">___</span>
+									<span>&lt;/table&gt;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Tables (a.k.a. spreadsheets)
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/html/html_tables.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="concepts" id="programmatic-poetry-css">
+					<h5><a href="#programmatic-poetry-css" class="concepts-title">CSS Properties for Laying Out Elements</a></h5>
+
+					<div class="concepts-list">
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>margin: </span>
+									<span class="concept-name-alt">20px;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Space outside an element (outside the border)
+							</p>
+							<p class="concept-note">
+								Individual margins can be set with “margin-top”, “margin-bottom”, “margin-left”, and “margin-right”
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_margin.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>padding: </span>
+									<span class="concept-name-alt">5px;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Space inside an element (inside the border)
+							</p>
+							<p class="concept-note">
+								Individual paddings can be set with “padding-top”, “padding-bottom”, “padding-left”, and “padding-right”
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css_padding.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>max-width: </span>
+									<span class="concept-name-alt">600px;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Maximum width
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_dim_max-width.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>min-width: </span>
+									<span class="concept-name-alt">200px;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Minimum width
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-width" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_dim_min-width.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>max-height: </span>
+									<span class="concept-name-alt">100vh;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Maximum height
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-height" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_dim_max-height.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>min-height: </span>
+									<span class="concept-name-alt">10em;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Minimum height
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-height" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/cssref/pr_dim_min-height.php" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+
+						<div class="concept">
+							<div class="concept-name">
+								<h5>
+									<span>columns: </span>
+									<span class="concept-name-alt">2;</span>
+								</h5>
+							</div>
+							<p class="concept-desc">
+								Columns of text
+							</p>
+							<div class="concept-links">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/columns" target="_blank"><span class="symbol">link</span> MDN</a>
+								<a href="https://www.w3schools.com/css/css3_multiple_columns.asp" target="_blank"><span class="symbol">link</span> W3Schools</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div class="editor" data-active="0">
+		<div class="editor-shortcuts" data-active="0" onclick="editorShortcuts();">
+			<div class="editor-shortcut">
+				<div class="editor-shortcut-keys">
+					<span class="symbol">keyboard_command_key</span>
+					<span>+</span>
+					<span>]</span>
+				</div>
+				<div class="editor-shortcut-action">
+					Indent selection right
+				</div>
+			</div>
+			<div class="editor-shortcut">
+				<div class="editor-shortcut-keys">
+					<span class="symbol">keyboard_command_key</span>
+					<span>+</span>
+					<span>[</span>
+				</div>
+				<div class="editor-shortcut-action">
+					Indent selection left
+				</div>
+			</div>
+			<div class="editor-shortcut">
+				<div class="editor-shortcut-keys">
+					<span class="symbol">keyboard_command_key</span>
+					<span>+</span>
+					<span>/</span>
+				</div>
+				<div class="editor-shortcut-action">
+					Comment/uncomment selection
+				</div>
+			</div>
+			<div class="editor-shortcut">
+				<div class="editor-shortcut-keys">
+					<span class="symbol">keyboard_control_key</span>
+					<span>+</span>
+					<span>space</span>
+				</div>
+				<div class="editor-shortcut-action">
+					Show suggestions (autocomplete)
+				</div>
+			</div>
+			<div class="editor-shortcuts-close">
+				<p><span class="symbol">close</span> Click anywhere to close</p>
+			</div>
+		</div>
+		<div class="editor-navbar">
+			<h3 class="editor-navbar-title">test-project-1.html</h3>
+			<button onclick="closeEditor();" class="editor-navbar-close"><span class="symbol">close</span> Close</button>
+		</div>
+		<div class="editor-content">
+			<div class="editor-code">
+				<div class="editor-cm"></div>
+				<div class="editor-controls">
+					<button onclick="editorToggleWrapping();" style="--primary: var(--yellow);"><span class="symbol">format_text_wrap</span> <span class="editor-controls-label">Wrap Text</span></button>
+					<button onclick="editorFontsizeDown();" style="--primary: var(--red);"><span class="symbol">text_decrease</span> <span class="editor-controls-label">Decrease Text Size</span></button>
+					<button onclick="editorFontsizeUp();" style="--primary: var(--blue);"><span class="symbol">text_increase</span> <span class="editor-controls-label">Increase Text Size</span></button>
+				</div>
+				<div class="editor-controls">
+					<button onclick="editorReset();" style="--primary: var(--purple);"><span class="symbol">restart_alt</span> <span class="editor-controls-label">Reset Changes</span></button>
+					<button onclick="editorDownload();" style="--primary: var(--green);"><span class="symbol">download</span> <span class="editor-controls-label">Download Code</span></button>
+					<button onclick="editorShortcuts();" style="--primary: var(--pink);"><span class="symbol">keyboard_command_key</span> <span class="editor-controls-label">Shortcuts</span></button>
+				</div>
+			</div>
+			<div class="editor-preview">
+				<iframe class="editor-iframe"></iframe>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

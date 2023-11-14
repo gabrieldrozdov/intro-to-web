@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#1b1b1b" stroke-width="0"/>
+  <g>
+    <polygon points="1462.593 772.273 1247.016 640 1462.593 507.727 1678.171 640 1462.593 772.273" fill="none" stroke="#f3a8dd" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <line x1="1247.016" y1="440" x2="1247.016" y2="640" fill="none" stroke="#f3a8dd" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <line x1="1462.593" y1="572.273" x2="1462.593" y2="772.273" fill="none" stroke="#f3a8dd" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <line x1="1678.171" y1="640" x2="1678.171" y2="440" fill="none" stroke="#f3a8dd" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <line x1="1462.593" y1="307.727" x2="1462.593" y2="507.727" fill="none" stroke="#f3a8dd" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <polygon points="1462.593 572.273 1247.016 440 1462.593 307.727 1678.171 440 1462.593 572.273" fill="none" stroke="#f3a8dd" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+  </g>
+  <g>
+    <circle cx="936.109" cy="693.774" r="84.229" fill="none" stroke="#98db6b" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <line x1="1020.338" y1="693.774" x2="1020.338" y2="307.727" fill="none" stroke="#98db6b" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+  </g>
+  <g>
+    <line x1="254.797" y1="726.872" x2="254.797" y2="772.273" fill="none" stroke="#a690fc" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <line x1="307.712" y1="700.91" x2="307.712" y2="772.273" fill="none" stroke="#a690fc" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <line x1="360.627" y1="676.236" x2="360.627" y2="772.273" fill="none" stroke="#a690fc" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <line x1="413.542" y1="663.816" x2="413.542" y2="772.273" fill="none" stroke="#a690fc" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <line x1="466.458" y1="615.274" x2="466.458" y2="772.273" fill="none" stroke="#a690fc" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <line x1="519.373" y1="544.391" x2="519.373" y2="772.273" fill="none" stroke="#a690fc" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <line x1="572.288" y1="446.94" x2="572.288" y2="772.273" fill="none" stroke="#a690fc" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+    <line x1="625.203" y1="307.727" x2="625.203" y2="772.273" fill="none" stroke="#a690fc" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="20"/>
+  </g>
+</svg>
